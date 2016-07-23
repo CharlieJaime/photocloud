@@ -16,10 +16,26 @@ class PhotosController < ApplicationController
     @photo = Photo.new(photo_params)
 
     if @photo.save
-      redirect_to @photo, notice: "Successfully uploaded"
+      redirect_to @photo, notice: "Successfully uploaded!"
     else
       render 'new'
     end
+  end
+
+  def edit
+  end
+
+  def update
+    if @photo.update(photo_params)
+      redirect_to @photo, notice: "Successfully updated!"
+    else
+      render 'update'
+    end
+  end
+
+  def destroy
+    @photo.destroy
+    redirect_to root_path
   end
 
   private

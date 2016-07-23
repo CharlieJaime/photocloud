@@ -1,4 +1,6 @@
 %h1= @photo.title
 %p= @photo.description
 
+= link_to "Edit", edit_photo_path
+= link_to "Delete", photo_path, method: :delete, data: { confirm: "Are you sure?" }
 = link_to "Back", root_path
