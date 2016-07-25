@@ -35,6 +35,8 @@ gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'devise', '~> 4.1', '>= 4.1.1'
 # Styling
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+# upload photos
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
