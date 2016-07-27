@@ -1,8 +1,19 @@
-= image_tag @photo.image.url
-%h1= @photo.title
-%p= @photo.description
-%p= @photo.user.email
-
-= link_to "Edit", edit_photo_path
-= link_to "Delete", photo_path, method: :delete, data: { confirm: "Are you sure?" }
-= link_to "Back", root_path
+#pic_show.row
+  .col-md-6.col-md-offset-3
+    .panel.panel-default
+      .panel.heading.pic_image
+        = image_tag @photo.image.url
+      .panel-body
+        %h1= @photo.title
+        %p= @photo.description
+      .panel-footer
+        .row
+          .col-md-6
+            %p.user
+              by
+              = @photo.user.email
+          .col.md-6
+            .btn-group.pull-right
+              - if user_signed_in?
+                = link_to "Edit", edit_photo_path, class: "btn btn-info"
+                = link_to "Delete", photo_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
