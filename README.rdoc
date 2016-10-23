@@ -1,0 +1,5 @@
+== README
+
+Ruby on Rails App
+
+This application is used to post and share your images. with the abilites to like or dislike and CRUD actions.
